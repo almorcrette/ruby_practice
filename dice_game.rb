@@ -1,18 +1,23 @@
 while true do
-    me = rand(6) + 1
-    opponent = rand(6) + 1
+    my_roll1 = rand(6) + 1
+    my_roll2 = rand(6) + 1
+    opponent_roll1 = rand(6) + 1
+    opponent_roll2 = rand(6) + 1
     
-    puts "I rolled " + me.to_s
-    puts "My opponent rolled " + opponent.to_s
+    my_result = my_roll1 + my_roll2
+    opponent_result = opponent_roll1 + opponent_roll2
     
-    if me != opponent
+    puts "I rolled " + my_result.to_s
+    puts "My opponent rolled " + opponent_result.to_s
+    
+    if my_result != opponent_result
         break
     end
     
     puts "No winner. Play another round!"
 end
 
-if me > opponent
+if my_result > opponent_result
     puts "I win!"
     return true
 else
